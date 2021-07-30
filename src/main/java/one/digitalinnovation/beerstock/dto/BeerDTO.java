@@ -9,6 +9,7 @@ import one.digitalinnovation.beerstock.enums.BeerType;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -34,6 +35,7 @@ public class BeerDTO {
 
     @NotNull
     @Max(100)
+    @Min(0)
     private Integer quantity;
 
     @Enumerated(EnumType.STRING)

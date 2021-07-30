@@ -1,7 +1,7 @@
 package one.digitalinnovation.beerstock.mapper;
 
 import one.digitalinnovation.beerstock.dto.BeerDTO;
-import one.digitalinnovation.beerstock.entity.Beer;
+import one.digitalinnovation.beerstock.entity.BeerEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
@@ -10,7 +10,7 @@ public interface BeerMapper {
 
     BeerMapper INSTANCE = Mappers.getMapper(BeerMapper.class);
 
-    Beer toModel(BeerDTO beerDTO);
+    BeerEntity toModel(BeerDTO beerDTO);
 
-    BeerDTO toDTO(Beer beer);
+    BeerDTO toDTO(BeerEntity beerEntity);
 }
